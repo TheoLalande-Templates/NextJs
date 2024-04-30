@@ -1,0 +1,13 @@
+	<Text color={'red'}>Home</Text>
+			<Button onClick={signout}>Sign Out</Button>
+			{isLoading ? (
+				<Text>Loading...</Text>
+			) : (
+				<Flex>
+					{products?.map((product) => (
+						<Flex key={product.id}>
+							<Text>{product.title}</Text>
+						</Flex>
+					))}
+				</Flex>
+			)}
